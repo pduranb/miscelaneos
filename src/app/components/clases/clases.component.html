@@ -1,0 +1,26 @@
+<div [ngClass]="alert" class="notification ">
+    <button class="delete"></button> Primar lorem ipsum dolor sit amet.<strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a>    efficitur. Sit amet, consectetur adipiscing elit
+</div>
+
+<p class="buttons">
+    <a (click)="alert = 'is-info'" class="button is-info">Info</a>
+    <a (click)="alert = 'is-success'" class="button is-success">Success</a>
+</p>
+
+<p [ngClass]="{'has-text-danger	': propiedades.danger,'has-text-info': !propiedades.danger }" class="title is-5">Probando mandando Boolean ng-class</p>
+
+<a [ngClass]="{'is-danger': propiedades.danger , 'is-info':!propiedades.danger }" (click)="propiedades.danger = !propiedades.danger" class="button is-info">Cambiar</a>
+
+<div class="section">
+    <div class="container">
+        <p class="title"> Proceso Asincrono</p>
+        <button (click)="ejecutar()" class="button is-success" [disabled]="loading">
+            <span class="icon ">
+              <i [ngClass]="{'fa-save':!loading ,'fa-sync fa-spin':loading}" 
+              class= "fa" ></i>
+            </span>
+            <span *ngIf="!loading">Guardar Cambios</span>
+            <span *ngIf="loading">ESperar por favor</span>
+        </button>
+    </div>
+</div>

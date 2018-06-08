@@ -1,0 +1,13 @@
+<div class="section">
+    <p class="title">Usuario</p>
+    <hr>
+    <div class="container">
+        <div class="buttons has-addons is-centered">
+            <span class="button" [routerLink]="['nuevo']" routerLinkActive="is-selected , is-info ">Nuevo</span>
+            <span class="button" [routerLink]="['editar']" routerLinkActive="is-selected is-info">Editar</span>
+            <span class="button" [routerLink]="['detalle']" routerLinkActive="is-selected is-info">Detalle</span>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

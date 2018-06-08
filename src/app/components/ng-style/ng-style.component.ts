@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-ng-style',
   template: `
-    <p [style.fontSize.px]="tamano" >
+    <p class="title" [style.fontSize.px]="tamano" >
       Probando Ng-style
     </p>
 
